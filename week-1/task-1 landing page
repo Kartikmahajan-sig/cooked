@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10;
+            padding: 10;
+            background-color: #f6f6f6;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            color: white;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .content {
+            padding: 50px;
+        }
+        section {
+            display: none;
+            padding: 20px;
+            background: white;
+            margin: 20px auto;
+            width: 60%;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('about')">About Us</a>
+        <a href="#" onclick="showSection('contact')">Contact Us</a>
+    </nav>
+    
+    <div class="content">
+        <section id="home" style="display: block;">
+            <h1>Welcome to Our Website</h1>
+            <p>This is the homepage.</p>
+        </section>
+        
+        <section id="about">
+            <h1>About Us</h1>
+            <p>We are a team dedicated to providing quality content and services.</p>
+        </section>
+        
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p>Email: mahajankartik84@gmail.com</p>
+        </section>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
